@@ -21,7 +21,7 @@ const testimonialsData = [
     occupation: 'Photographer',
     testimonial: 'The stunning architecture and friendly locals made my photography trip exceptional.',
   },
-  // Adăugați alte testimoniale aici
+
 ];
 
 interface TestimonialCardProps {
