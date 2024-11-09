@@ -3,6 +3,7 @@ import { styled } from '@mui/material/styles';
 import Appbar from './Navbar';
 import TourismCardsSection from './CardSelection';
 import Footer from './Footer';
+import Testimonials from './TestimonialsSelection';
 
 const HeroSection = styled(Box)(({ theme }) => ({
   backgroundImage: 'url("../img/Piața_Victoriei_Timișoara.jpg")',
@@ -68,6 +69,7 @@ function LandingPage() {
         <Typography variant="body1" color="text.secondary" sx={{ mb: 4 }}>
           "Timișoara is a hidden gem in Romania! The historic sites and friendly locals made my trip unforgettable."
         </Typography>
+        <Testimonials/>
         <Typography variant="body1" color="text.secondary" sx={{ mb: 4 }}>
           "Beautiful city with so much to offer. From the stunning river views to the rich culture, I loved every moment!"
         </Typography>
