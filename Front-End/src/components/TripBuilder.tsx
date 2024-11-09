@@ -59,8 +59,9 @@ const TripBuilder: React.FC<TripBuilderProps> = ({ isAuthenticated }) => {
             alert("Please select a trip type and interests.");
             return;
         }
-        setLoading(true);
-        setLoading(false);
+        // setLoading(true);
+        // setLoading(false);
+        navigate('/matching-tours');
     };
 
     const handleSaveTrip = async () => {
@@ -72,7 +73,7 @@ const TripBuilder: React.FC<TripBuilderProps> = ({ isAuthenticated }) => {
         setLoading(false);
     };
 
-    const handleTripTypeChange = (event: React.MouseEvent<HTMLElement>, newTripType: string | null) => {
+    const handleTripTypeChange = (_event: React.MouseEvent<HTMLElement>, newTripType: string | null) => {
         if (newTripType) setTripType(newTripType);
     };
 
