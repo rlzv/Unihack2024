@@ -2,6 +2,7 @@ import { Box, Button, Typography, Container } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import Appbar from './Navbar';
 import TourismCardsSection from './CardSelection';
+import Footer from './Footer';
 
 const HeroSection = styled(Box)(({ theme }) => ({
   backgroundImage: 'url("../img/Piața_Victoriei_Timișoara.jpg")',
@@ -71,6 +72,7 @@ function LandingPage() {
           "Beautiful city with so much to offer. From the stunning river views to the rich culture, I loved every moment!"
         </Typography>
       </Container>
+      <Footer/>
     </Box>
   );
 }
