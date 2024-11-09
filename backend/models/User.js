@@ -1,38 +1,22 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
+const { userDBConnection } = require('../dbConnections');
 
 const UserSchema = new mongoose.Schema({
-    username: {type: String, required: true, unique: true},
-    email: { type: String, required: true, unique: true},
-    password: { type: String, required: true},
+    username: { type: String, required: true, unique: true },
+    email: { type: String, required: true, unique: true },
+    password: { type: String, required: true },
 });
 
-
-UserSchema.pre('save', async function(next) {
-    if(!this.isModified('password')){
-        return next();
-    }
-
+UserSchema.pre('save', async function (next) {
+    if (!this.isModified('password')) return next();
     const salt = await bcrypt.genSalt(10);
-    const hashedPassword = await bcrypt.hash(this.password, salt);
-    this.password = hashedPassword;
+    this.password = await bcrypt.hash(this.password, salt);
     next();
 });
 
-UserSchema.methods.comparePassword = async function(password,cb) {
-    bcrypt.compare(password, this.password, (err, isMatch) => {
-        if(err) {
-            return cb(err);
-        } else {
-            if(!isMatch) {
-                console.log('Password doesnt match');
-                return cb(null, isMatch);
-            }
-            return cb(null, this);
-        }
-    })
-    }
-    
-    const User = mongoose.model('User', UserSchema);
-    
-    module.exports = User
+UserSchema.methods.comparePassword = async function (password) {
+    return bcrypt.compare(password, this.password);
+};
+
+module.exports = userDBConnection.model('User', UserSchema);

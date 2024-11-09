@@ -1,13 +1,25 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import AppBar from './Navbar'
-import './App.css'
+import React from 'react';
+import { Routes, Route, Navigate } from 'react-router-dom';
+import Login from './components/Login';
+import RegisterUser from './components/RegisterUser';
+import TripBuilder from './components/TripBuilder';
+import TourSelectionPage from './components/TourSelectionPage.tsx';
+import MatchingTours from './components/MatchingTours';
+import LandingPage from './LandingPage';
 
-function App() {
-  return (
-    <AppBar/>
-  )
-}
+const App: React.FC = () => {
+    const [isAuthenticated, setIsAuthenticated] = React.useState(false);
 
-export default App
+    return (
+        <Routes>
+            <Route path="/" element={<LandingPage />} />
+            <Route path="/login" element={<Login onLoginSuccess={() => setIsAuthenticated(true)} />} />
+            <Route path="/register" element={<RegisterUser onRegisterSuccess={() => setIsAuthenticated(true)} />} />
+            <Route path="/create-tour" element={<TripBuilder isAuthenticated={isAuthenticated} />} />
+            <Route path="/matching-tours" element={<MatchingTours />} />
+            <Route path="/tours" element={<TourSelectionPage />} />
+        </Routes>
+    );
+};
+
+export default App;
