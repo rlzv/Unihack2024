@@ -6,6 +6,7 @@ import TripBuilder from './components/TripBuilder';
 import TourSelectionPage from './components/TourSelectionPage.tsx';
 import MatchingTours from './components/MatchingTours';
 import LandingPage from './LandingPage';
+import ContactUs from './ContactUs.tsx'
 
 const App: React.FC = () => {
     const [isAuthenticated, setIsAuthenticated] = React.useState(false);
@@ -18,6 +19,7 @@ const App: React.FC = () => {
             <Route path="/create-tour" element={<TripBuilder isAuthenticated={isAuthenticated} />} />
             <Route path="/matching-tours" element={<MatchingTours />} />
             <Route path="/tours" element={<TourSelectionPage />} />
+            <Route path="/contact-us" element={<ContactUs />} />
         </Routes>
     );
 };

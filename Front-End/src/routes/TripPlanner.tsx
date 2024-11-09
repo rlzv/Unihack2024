@@ -12,8 +12,9 @@ import {
     DialogActions,
     TextField,
 } from '@mui/material';
-import { DateRange, LocalizationProvider, DateRangePicker } from '@mui/lab';
+import { StaticDatePicker } from '@mui/lab';
 import AdapterDateFns from '@mui/lab/AdapterDateFns';
+import { LocalizationProvider } from '@mui/lab';
 
 interface TripPlannerProps {
     isAuthenticated: boolean;
@@ -21,7 +22,7 @@ interface TripPlannerProps {
 
 const TripPlanner: React.FC<TripPlannerProps> = ({ isAuthenticated }) => {
     const [step, setStep] = useState(1);
-    const [dateRange, setDateRange] = useState<DateRange<Date>>([null, null]);
+    const [dateRange, setDateRange] = useState<[Date | null, Date | null]>([null, null]);
     const [tripType, setTripType] = useState<string | null>(null);
     const [interests, setInterests] = useState<string[]>([]);
 
@@ -73,17 +74,12 @@ const TripPlanner: React.FC<TripPlannerProps> = ({ isAuthenticated }) => {
                             Choose a date range, up to 7 days.
                         </Typography>
                         <LocalizationProvider dateAdapter={AdapterDateFns}>
-                            <DateRangePicker
-                                startText="Start Date"
-                                endText="End Date"
+                        <StaticDatePicker orientation="portrait" />
+                            <StaticDatePicker // Set orientation to portrait
+                                displayStaticWrapperAs="desktop"
                                 value={dateRange}
                                 onChange={(newValue) => setDateRange(newValue)}
-                                renderInput={(startProps, endProps) => (
-                                    <Box display="flex" gap={2} mt={2}>
-                                        <TextField {...startProps} fullWidth />
-                                        <TextField {...endProps} fullWidth />
-                                    </Box>
-                                )}
+                                renderInput={(props) => <TextField {...props} fullWidth />}
                             />
                         </LocalizationProvider>
                     </Box>
