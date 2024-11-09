@@ -1,18 +1,16 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { Box, Typography } from '@mui/material';
 import './index.css';
-const Video: React.FC = () => {
-  const iframeRef = useRef<HTMLIFrameElement>(null);
 
+const Video: React.FC = () => {
   return (
-    <Box sx={{ position: 'relative', width: '100%', height: '100vh', overflow: 'hidden',marginTop: '150px', }}>
-      {/* YouTube Embed */}
-      <iframe
-        ref={iframeRef}
-        src="https://www.youtube.com/embed/Xc8Qx0XFWsA?autoplay=1&mute=1&loop=1&playlist=Xc8Qx0XFWsA&controls=0&start=14"
-        title="YouTube Video"
-        frameBorder="0"
-        allow="autoplay; encrypted-media"
+    <Box sx={{ position: 'relative', width: '100%', height: '100vh', overflow: 'hidden', marginTop: '150px' }}>
+      {/* Video Background */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
         style={{
           position: 'absolute',
           top: 0,
@@ -21,8 +19,12 @@ const Video: React.FC = () => {
           height: '109.25%',
           objectFit: 'cover',
           zIndex: -1,
+          backgroundColor: 'rgba(0, 0, 0, 0.6)',
         }}
-      />
+      >
+        <source src="../img/🇷🇴 Timisoara_ The Little Vienna of Eastern Europe in 4K.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
 
       {/* Full Overlay */}
       <Box
@@ -44,7 +46,7 @@ const Video: React.FC = () => {
         }}
       >
         {/* Centered Announcement and Content */}
-        <Box sx={{maxWidth: '800px', paddingBottom:'300px'}}>
+        <Box sx={{ maxWidth: '800px', paddingBottom: '300px', margin: '300px' }}>
           <Typography variant="h2" gutterBottom sx={{ fontFamily: 'Raleway' }}>
             Timișoara: European Capital of Culture 2023
           </Typography>

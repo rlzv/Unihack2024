@@ -6,6 +6,9 @@ import TourismCardsSection from './CardSelection';
 import Footer from './Footer';
 import Testimonials from './TestimonialsSelection';
 import Video from './Video'
+import FAQ from './FAQ.tsx';
+import MAP from './Map.tsx'
+
 
 const HeroSection = styled(Box)(({ theme }) => ({
     backgroundImage: 'url("../img/Piața_Victoriei_Timișoara.jpg")',
@@ -51,12 +54,13 @@ function LandingPage() {
             </SvgDivider>
 
             <HeroSection>
-                <Typography variant="h3" sx={{ mb: 2 }}>
+                <Typography variant="h3" sx={{ mb: 2}}>
                     Let’s Enjoy Your Life, Explore the World
                 </Typography>
                 <Button
                     variant="contained"
                     sx={{
+                       marginRight : '15px',
                         backgroundColor: '#0070bb',
                         color: 'white',
                         mb: 4,
@@ -91,6 +95,8 @@ Must-Visit Areas in Timișoara
   color="text.secondary"
   sx={{
     marginTop: '40px',
+    MarginBottom: '0',
+    paddingBottom: '0',
     mb: 4,
     textAlign: 'center', // Center the text horizontally
     maxWidth: '900px', // Set a max width for readability
@@ -104,7 +110,7 @@ Must-Visit Areas in Timișoara
 </Typography>
             <TourismCardsSection />
             <Video />
-            <Container sx={{ mt: 6, textAlign: 'center',marginBottom: '100px' }}>
+            <Container sx={{ mt: 6, textAlign: 'center',marginBottom: '100px', marginTop: '0px',}}>
                 <Typography variant="h4" gutterBottom>
                     What Our Visitors Say
                 </Typography>
@@ -116,6 +122,8 @@ Must-Visit Areas in Timișoara
                     "Beautiful city with so much to offer. From the stunning river views to the rich culture, I loved every moment!"
                 </Typography>
             </Container>
+            <MAP/>
+            <FAQ/>
             <Footer />
         </Box>
     );
