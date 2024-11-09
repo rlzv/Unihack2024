@@ -5,6 +5,7 @@ import Appbar from './Navbar';
 import TourismCardsSection from './CardSelection';
 import Footer from './Footer';
 import Testimonials from './TestimonialsSelection';
+import Video from './Video'
 
 const HeroSection = styled(Box)(({ theme }) => ({
     backgroundImage: 'url("../img/Piața_Victoriei_Timișoara.jpg")',
@@ -69,8 +70,41 @@ function LandingPage() {
                     Create your own trip
                 </Button>
             </HeroSection>
-            <TourismCardsSection />
-            <Container sx={{ mt: 6, textAlign: 'center' }}>
+            <Typography
+  variant="body1"
+  color="text.secondary"
+  sx={{
+    marginTop: '80px',
+    mb: 4,
+    textAlign: 'center', // Center the text horizontally
+    maxWidth: '900px', // Set a max width for readability
+    marginLeft: 'auto', // Center the block horizontally
+    marginRight: 'auto', // Center the block horizontally
+    lineHeight: 1.6, // Adjust line height for better readability
+    fontSize: '40px'
+  }}
+>
+Must-Visit Areas in Timișoara
+</Typography>
+            <Typography
+  variant="body1"
+  color="text.secondary"
+  sx={{
+    marginTop: '40px',
+    mb: 4,
+    textAlign: 'center', // Center the text horizontally
+    maxWidth: '900px', // Set a max width for readability
+    marginLeft: 'auto', // Center the block horizontally
+    marginRight: 'auto', // Center the block horizontally
+    lineHeight: 1.6, // Adjust line height for better readability
+    fontbold: 700,
+  }}
+>
+  Explore the unique beauty of Timișoara, a city full of history, art, and authentic charm. From historic squares to tranquil parks and captivating museums, Timișoara offers memorable places to discover at every step. Below are some of the must-see spots that reveal the vibrant and multicultural character of the city.
+</Typography>
+            <TourismCardsSection sx={{ marginBottom: '100px' }}/>
+            <Video />
+            <Container sx={{ mt: 6, textAlign: 'center',marginBottom: '100px' }}>
                 <Typography variant="h4" gutterBottom>
                     What Our Visitors Say
                 </Typography>

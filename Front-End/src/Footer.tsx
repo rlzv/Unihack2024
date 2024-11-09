@@ -6,7 +6,13 @@ const Footer: React.FC = () => {
     const [email, setEmail] = useState('');
     const [status, setStatus] = useState<{ message: string; type: 'success' | 'error' | null }>({ message: '', type: null });
     const [emailError, setEmailError] = useState<string | null>(null);
-
+    const links = [
+        { text: 'Home', url: '/' },
+        { text: 'My Tours', url: '/my-tours' },
+        { text: 'Visit Timisoara', url: 'https://visit-timisoara.com/ro/pagina-oficiala-de-turism-a-orasului-timisoara/' },
+        { text: 'Tours', url: '/tours' },
+        { text: 'Contact us', url: '/contact-us' },
+      ];
     // Email validation function
     const isValidEmail = (email: string) => {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -64,16 +70,36 @@ const Footer: React.FC = () => {
                     </Grid>
 
                     {/* Useful Links */}
-                    <Grid item xs={12} sm={2}>
-                        <Typography variant="h6" color="primary" gutterBottom sx={{ mb: 3, color: '#0070bb', cursor: 'pointer', borderBottom: '2px solid #0070bb', pb: 1 }}>
-                            Useful Links
-                        </Typography>
-                        {['Home', 'My Tours', 'Visit Timisoara', 'Tours', 'Contact us'].map((text, index) => (
-                            <Link key={index} href="#" color="inherit" display="block" variant="body2" sx={{ textDecoration: 'none', mb: 1, color: '#00000099' }}>
-                                {text}
-                            </Link>
-                        ))}
-                    </Grid>
+   
+
+<Grid item xs={12} sm={2}>
+  <Typography
+    variant="h6"
+    color="primary"
+    gutterBottom
+    sx={{
+      mb: 3,
+      color: '#0070bb',
+      cursor: 'pointer',
+      borderBottom: '2px solid #0070bb',
+      pb: 1,
+    }}
+  >
+    Useful Links
+  </Typography>
+  {links.map((link, index) => (
+    <Link
+      key={index}
+      href={link.url}  // Link-ul specificat
+      color="inherit"
+      display="block"
+      variant="body2"
+      sx={{ textDecoration: 'none', mb: 1, color: '#00000099' }}
+    >
+      {link.text}
+    </Link>
+  ))}
+</Grid>
 
                     {/* Contact Info */}
                     <Grid item xs={12} sm={3}>

@@ -94,9 +94,11 @@ const NavBar: React.FC = () => {
             </Link>
 
             {/* Visit Timisoara Button */}
-            <Link to="/visit-timisoara" style={{ textDecoration: 'none' }}>
+
               <Button
+              href ='https://visit-timisoara.com/ro/pagina-oficiala-de-turism-a-orasului-timisoara/'
                 sx={{
+                  textDecoration: 'none',
                   color: 'white',
                   mx: 2,
                   textTransform: 'none',
@@ -114,7 +116,6 @@ const NavBar: React.FC = () => {
               >
                 Visit Timisoara
               </Button>
-            </Link>
 
             {/* Tours Button */}
             <Link to="/tours" style={{ textDecoration: 'none' }}>

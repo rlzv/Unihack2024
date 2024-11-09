@@ -56,7 +56,7 @@ d="M0,160L40,170.7C80,181,160,203,240,181.3C320,160,400,96,480,101.3C560,107,640
           py: 5,
         }}
       >
-        <Container maxWidth="md">
+        <Container maxWidth="lg">
           <Grid container spacing={5} alignItems="center">
             {/* Left Section - Contact Details */}
             <Grid item xs={12} md={6}>
@@ -67,14 +67,17 @@ d="M0,160L40,170.7C80,181,160,203,240,181.3C320,160,400,96,480,101.3C560,107,640
              Get In Touch With Us
             </Typography>
               <Typography variant="body1" paragraph>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              "Looking for your next adventure? We're here to turn your dream vacation into reality! Get in touch with us, and we'll help you plan an unforgettable journey."
+"Feel free to reach out with any questions – we're happy to assist!"
+
+This version focuses on the excitement of travel while offering a friendly invitation for assistance.
               </Typography>
               
               <Box display="flex" alignItems="center" mb={2}>
                 <LocationOnIcon sx={{ color: '#005faf', mr: 2 }} />
                 <Box>
                   <Typography variant="subtitle1">Our Location</Typography>
-                  <Typography variant="body2">99 St. Jomblo Park Pekanbaru, 28292, Indonesia</Typography>
+                  <Typography variant="body2">Strada Alba Iulia nr.2 Timisoara</Typography>
                 </Box>
               </Box>
 
@@ -82,7 +85,7 @@ d="M0,160L40,170.7C80,181,160,203,240,181.3C320,160,400,96,480,101.3C560,107,640
                 <PhoneIcon sx={{ color: '#005faf', mr: 2 }} />
                 <Box>
                   <Typography variant="subtitle1">Phone Number</Typography>
-                  <Typography variant="body2">(+62)81 414 257 9980</Typography>
+                  <Typography variant="body2">Phone: +071234567</Typography>
                 </Box>
               </Box>
 
@@ -90,7 +93,7 @@ d="M0,160L40,170.7C80,181,160,203,240,181.3C320,160,400,96,480,101.3C560,107,640
                 <EmailIcon sx={{ color: '#005faf', mr: 2}} />
                 <Box>
                   <Typography variant="subtitle1">Email Address</Typography>
-                  <Typography variant="body2">info@yourdomain.com</Typography>
+                  <Typography variant="body2">infocentru@e-uvt.ro</Typography>
                 </Box>
               </Box >
             </Grid>
