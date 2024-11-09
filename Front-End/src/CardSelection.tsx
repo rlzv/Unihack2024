@@ -18,6 +18,21 @@ const attractions = [
     title: 'Opera House',
     description: 'Experience cultural performances in an iconic building.',
   },
+  {
+    image: '../img/Parcul_Botanic.jpg',
+    title: 'Botanic Park',
+    description: 'A serene green space perfect for relaxation and nature walks.',
+  },
+  {
+    image: '../img/Liberty_square.jpg',
+    title: 'Liberty Square',
+    description: 'A picturesque square with historic buildings and cozy cafes.',
+  },
+  {
+    image: '../img/Biserica_Catolica.jpg',
+    title: 'Roman Catholic Cathedral',
+    description: 'Marvel at the stunning architecture and interior of this landmark.',
+  },
 ];
 
 const TourismCardsSection: React.FC = () => {

@@ -34,7 +34,6 @@ const TripPlanner: React.FC<TripPlannerProps> = ({ onClose }) => {
             });
             const result = await response.json();
             if (response.ok) {
-                // Close the dialog and redirect to the trip view page
                 onClose();
                 window.location.href = `/trip/${result.tripId}`;
             } else {

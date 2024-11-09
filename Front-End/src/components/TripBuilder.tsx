@@ -60,7 +60,6 @@ const TripBuilder: React.FC<TripBuilderProps> = ({ isAuthenticated }) => {
             return;
         }
         setLoading(true);
-        // Finish action logic here
         setLoading(false);
     };
 
@@ -70,7 +69,6 @@ const TripBuilder: React.FC<TripBuilderProps> = ({ isAuthenticated }) => {
             return;
         }
         setLoading(true);
-        // Save action logic here
         setLoading(false);
     };
 

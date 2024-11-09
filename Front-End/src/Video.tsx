@@ -9,7 +9,7 @@ const Video: React.FC = () => {
       {/* YouTube Embed */}
       <iframe
         ref={iframeRef}
-        src="https://www.youtube.com/embed/Xc8Qx0XFWsA?autoplay=1&mute=1&loop=1&playlist=Xc8Qx0XFWsA&controls=0"
+        src="https://www.youtube.com/embed/Xc8Qx0XFWsA?autoplay=1&mute=1&loop=1&playlist=Xc8Qx0XFWsA&controls=0&start=14"
         title="YouTube Video"
         frameBorder="0"
         allow="autoplay; encrypted-media"

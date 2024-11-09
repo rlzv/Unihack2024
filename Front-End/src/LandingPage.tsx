@@ -102,7 +102,7 @@ Must-Visit Areas in Timișoara
 >
   Explore the unique beauty of Timișoara, a city full of history, art, and authentic charm. From historic squares to tranquil parks and captivating museums, Timișoara offers memorable places to discover at every step. Below are some of the must-see spots that reveal the vibrant and multicultural character of the city.
 </Typography>
-            <TourismCardsSection sx={{ marginBottom: '100px' }}/>
+            <TourismCardsSection />
             <Video />
             <Container sx={{ mt: 6, textAlign: 'center',marginBottom: '100px' }}>
                 <Typography variant="h4" gutterBottom>
