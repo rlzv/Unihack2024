@@ -5,7 +5,6 @@ import { Facebook, Twitter, LinkedIn, Instagram, YouTube } from '@mui/icons-mate
 const Footer: React.FC = () => {
   return (
     <Box sx={{ backgroundColor: '#f0f0f0', color: 'text.primary', py: 6, position: 'relative' }}>
-      {/* SVG cu z-index 0 */}
       <svg
         id="wave"
         style={{
@@ -14,7 +13,7 @@ const Footer: React.FC = () => {
           bottom: '0',
           left: '0',
           width: '100%',
-          zIndex: 0, // Setăm z-index 0 pentru svg
+          zIndex: 0,
         }}
         viewBox="0 0 1440 330"
         xmlns="http://www.w3.org/2000/svg"
