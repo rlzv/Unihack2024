@@ -135,10 +135,7 @@ const MatchingTours: React.FC = () => {
 
   return (
     <ThemeProvider theme={lightTheme}>
-      <Box p={4} sx={{ bgcolor: 'background.default', minHeight: '100vh' }}>
-        <Typography variant="h4" gutterBottom>
-          Recommended Tours
-        </Typography>
+      <Box p={4} sx={{ bgcolor: 'background.default', width:'100%',height:'100%',padding:'0' }}>
         {matchingTours.length > 0 ? (
           matchingTours.map((tour: any) => (
             <Card
@@ -146,7 +143,8 @@ const MatchingTours: React.FC = () => {
               variant="outlined"
               sx={{
                 mb: 4,
-                bgcolor: '#005faf',
+                bgcolor: 'red',
+                height:'100%',
                 color: '#ffffff',
               }}
             >
@@ -250,13 +248,7 @@ const MatchingTours: React.FC = () => {
                     </MapContainer>
                   </Grid>
                 </Grid>
-              </CardContent>
-            </Card>
-          ))
-        ) : (
-          <Typography variant="body1">No matching tours found.</Typography>
-        )}
-        <Button
+                <Button
           onClick={() => navigate('/')}
           variant="contained"
           color="primary"
@@ -264,6 +256,13 @@ const MatchingTours: React.FC = () => {
         >
           Go Back to Trip Builder
         </Button>
+              </CardContent>
+            </Card>
+          ))
+        ) : (
+          <Typography variant="body1">No matching tours found.</Typography>
+        )}
+
       </Box>
     </ThemeProvider>
   );

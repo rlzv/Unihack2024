@@ -9,7 +9,7 @@ const MapEmbed = () => {
       </div>
 
       {/* Visible Title */}
-      <h1 style={{ fontSize: '40px',  margin: 0, color : '#0000099' }}>
+      <h1 style={{ fontSize: '40px',  margin: 0, color : '#00000099' }}>
         The Best Map
       </h1>
 
@@ -22,7 +22,7 @@ const MapEmbed = () => {
         style={{ borderRadius: '8px', marginTop: '20px' }}
       />
 
-      <p style={{ fontSize: '24px', color :'#0000099', marginTop: '20px' }}>
+      <p style={{ fontSize: '24px', color :'#00000099', marginTop: '20px' }}>
         To Visit TM
       </p>
     </div>

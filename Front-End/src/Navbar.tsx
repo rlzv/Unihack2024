@@ -71,7 +71,7 @@ const NavBar: React.FC = () => {
             </Link>
             
             {/* My Tours Button */}
-            <Link to="/my-tours" style={{ textDecoration: 'none' }}>
+            <Link to="/user-profile" style={{ textDecoration: 'none' }}>
               <Button
                 sx={{
                   color: 'white',
@@ -167,7 +167,7 @@ const NavBar: React.FC = () => {
           {/* Right Button (Sign up) */}
           <Box sx={{ display: 'flex', gap: 1 }}>
             <Button
-              href="/SignUp"
+              href="/auth"
               sx={{
                 color: scrolled ? '#0070bb' : 'white',
                 backgroundColor: scrolled ? 'white' : '#0070bb',

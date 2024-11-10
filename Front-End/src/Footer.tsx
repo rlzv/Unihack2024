@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
     const [emailError, setEmailError] = useState<string | null>(null);
     const links = [
         { text: 'Home', url: '/' },
-        { text: 'My Tours', url: '/my-tours' },
+        { text: 'My Tours', url: '/user-profile' },
         { text: 'Visit Timisoara', url: 'https://visit-timisoara.com/ro/pagina-oficiala-de-turism-a-orasului-timisoara/' },
         { text: 'Tours', url: '/tours' },
         { text: 'Contact us', url: '/contact-us' },
